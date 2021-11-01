@@ -1,18 +1,18 @@
 # I study lazy evaluation use Kotlin
 
-Iterable and Sequence base and not extension function
+Iterable and Sequence base and not extension function.
 
-it can study delayed evaluation
+I studied lazy evaluation and little bit functional programming technic.
 
 I tried to implement legacy Kotlin code as much as possible, and the logic is almost similar to built-in functions.
 
 ## map
 
-map function transform T to R and return new Iterable or Sequence
+map function transform T to R and return new Iterable or Sequence.
 
-Iterable base function take all iterator and return new Iterable
+Iterable base function take all iterator and return new Iterable.
 
-Sequence base function doesn't take iterator. just return new overried Iterator
+Sequence base function doesn't take iterator. just return new overried Iterator.
 
 #### Iterable base
 
@@ -69,7 +69,7 @@ fun <T, R> mapL(transform: (T) -> R): (Sequence<T>) -> Sequence<R> {
 
 A pipeline is implemented to make function composition easier.
 
-if curried map or etc. exist, it doesn't have to lambda function like { iterable: Iterable<T> -> map(iterable) { it * 2 } }.
+if **curried** map or etc. exist, it doesn't have to lambda function like { iterable: Iterable<T> -> map(iterable) { it * 2 } }.
 
 ```kotlin
 fun <T> go(
