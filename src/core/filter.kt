@@ -13,3 +13,9 @@ fun <T> filter(iterable: Iterable<T>, predicate: (T) -> Boolean): Iterable<T> {
 
     return new.asIterable()
 }
+
+fun <T> filter(predicate: (T) -> Boolean): (Iterable<T>) -> Iterable<T> {
+    return { iterable: Iterable<T> ->
+    	filter(iterable, predicate)
+    }
+}
